@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Muhammad Zeeshan — BS Electrical Engineering Technology Graduate | Control Systems | PLC | MATLAB | Power Distribution | Sargodha, Pakistan"/>
+  <meta name="keywords" content="Electrical Engineer, Electrical Engineering Technology, PLC, MATLAB, Control Systems, Power Distribution, Biomedical Technician, University of Sargodha"/>
+  <meta name="author" content="Muhammad Zeeshan"/>
+  <title>Muhammad Zeeshan — Electrical Engineer | CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --navy: #0a1628;
+      --blue: #1a3a6b;
+      --accent: #c8973a;
+      --cream: #faf8f4;
+      --text: #2c2c2c;
+      --muted: #6b7280;
+      --line: #e2d9cc;
+      --white: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 40px auto;
+      background: var(--white);
+      box-shadow: 0 20px 80px rgba(10,22,40,0.15);
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      min-height: 1100px;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      background: var(--navy);
+      color: var(--white);
+      padding: 48px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .photo-wrap { text-align: center; }
+    .photo-circle {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      margin: 0 auto 12px;
+      overflow: hidden;
+      background: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .photo-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .photo-initials {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      color: var(--accent);
+      font-weight: 900;
+      display: none;
+    }
+
+    .sidebar-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      text-align: center;
+      line-height: 1.3;
+    }
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--accent);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-top: 4px;
+    }
+
+    .sidebar h2 {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+      border-bottom: 1px solid rgba(200,151,58,0.35);
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .contact-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .contact-list li { display: flex; align-items: flex-start; gap: 10px; }
+    .contact-list .icon {
+      width: 16px;
+      flex-shrink: 0;
+      color: var(--accent);
+      margin-top: 3px;
+    }
+    .contact-list .c-label {
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+      display: block;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+    .contact-list .c-value {
+      display: block;
+      font-size: 12px;
+      color: #c8d4e8;
+      word-break: break-all;
+    }
+    .contact-list a { color: #c8d4e8; text-decoration: none; }
+    .contact-list a:hover { color: var(--accent); }
+
+    .tools-list { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tool-badge {
+      background: var(--accent);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 11px;
+      border-radius: 3px;
+    }
+
+    .interpersonal-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .interpersonal-list li {
+      font-size: 12px;
+      color: #c8d4e8;
+      padding-left: 14px;
+      position: relative;
+    }
+    .interpersonal-list li::before {
+      content: '▸';
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-size: 10px;
+      top: 1px;
+    }
+
+    .hobbies-text { font-size: 12.5px; color: #c8d4e8; line-height: 1.9; }
+
+    .lang-list { display: flex; flex-wrap: wrap; gap: 6px; }
+    .lang-tag {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(200,151,58,0.3);
+      color: #c8d4e8;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+
+    /* ── MAIN ── */
+    .main {
+      padding: 48px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 34px;
+    }
+
+    .main-header {
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 24px;
+    }
+    h1.main-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1.1;
+    }
+    h1.main-name span { color: var(--accent); }
+
+    .main-role {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 6px;
+    }
+    .objective-text {
+      margin-top: 16px;
+      font-size: 13.5px;
+      color: #444;
+      line-height: 1.75;
+      max-width: 520px;
+      border-left: 3px solid var(--accent);
+      padding-left: 14px;
+    }
+
+    .main h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .main h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px dashed var(--line);
+    }
+    .edu-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .edu-degree { font-weight: 600; font-size: 14px; color: var(--navy); }
+    .edu-institution { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+    .edu-year {
+      background: var(--navy);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+
+    .intern-item {
+      padding-left: 16px;
+      border-left: 3px solid var(--accent);
+      margin-bottom: 18px;
+    }
+    .intern-item:last-child { margin-bottom: 0; }
+    .intern-role { font-weight: 600; font-size: 13.5px; color: var(--navy); }
+    .intern-org { font-size: 12.5px; color: var(--muted); margin-bottom: 4px; }
+    .intern-desc { font-size: 13px; color: #555; }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .skill-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 13px;
+      color: #444;
+    }
+    .skill-item::before {
+      content: '✦';
+      color: var(--accent);
+      font-size: 9px;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    .personal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 20px;
+    }
+    .personal-item { display: flex; flex-direction: column; }
+    .p-label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+    }
+    .p-value { font-size: 13px; color: var(--navy); font-weight: 500; }
+
+    .reference-box {
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 14px 18px;
+      font-size: 13px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    @media print {
+      body { background: white; }
+      .page { box-shadow: none; margin: 0; max-width: 100%; }
+    }
+
+    /* Animations */
+    .sidebar { animation: slideIn 0.5s ease forwards; }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .main > * {
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+    .main > *:nth-child(1) { animation-delay: 0.1s; }
+    .main > *:nth-child(2) { animation-delay: 0.2s; }
+    .main > *:nth-child(3) { animation-delay: 0.3s; }
+    .main > *:nth-child(4) { animation-delay: 0.4s; }
+    .main > *:nth-child(5) { animation-delay: 0.5s; }
+    .main > *:nth-child(6) { animation-delay: 0.6s; }
+  </style>
+</head>
+<body>
+
+<div style="position:absolute;left:-9999px;top:0;height:1px;overflow:hidden;">
+  Name: Muhammad Zeeshan
+  Email: zeeshanqazi0082@gmail.com
+  Phone: 0303-3008282
+  Location: Sargodha, Pakistan
+  Job Title: Electrical Engineer
+  Degree: BS Electrical Engineering Technology, University of Sargodha, 2020-2024
+  Degree: FSC Pre-Engineering, Punjab Groups of College Sargodha, 2018-2020
+  Skills: Electrical Engineering, Control Systems, Power Distribution Systems, PLC Programming, MATLAB, MS Office, Electronic Components, Testing Equipment, Hardware Design
+  Experience: Biomedical Technician Intern, Biomedical Equipment Resource Center BERC
+  Experience: Biomedical Technician Intern, Popular International Company, Faisalabad, 1 month
+  Languages: English, Urdu
+  Nationality: Pakistani
+</div>
+
+<div class="page">
+
+  <!-- ══════════ SIDEBAR ══════════ -->
+  <aside class="sidebar">
+
+    <div class="photo-wrap">
+      <div class="photo-circle">
+        <img
+          src="dp.jpeg"
+          alt="Muhammad Zeeshan — Profile Photo"
+          onerror="this.style.display='none'; document.querySelector('.photo-initials').style.display='flex';"
+        />
+        <span class="photo-initials">MZ</span>
+      </div>
+      <div class="sidebar-name">Muhammad Zeeshan</div>
+      <div class="sidebar-title">Electrical Engineer</div>
+    </div>
+
+    <section aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <ul class="contact-list">
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div>
+            <span class="c-label">Email</span>
+            <a href="mailto:zeeshanqazi0082@gmail.com" class="c-value">zeeshanqazi0082@gmail.com</a>
+          </div>
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.27 7.81a16 16 0 006.92 6.92l1.17-1.17a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          <div>
+            <span class="c-label">Phone</span>
+            <a href="tel:+923033008282" class="c-value">0303-3008282</a>
+          </div>
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <span class="c-label">Location</span>
+            <span class="c-value">Sargodha, Pakistan</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="tools-heading">
+      <h2 id="tools-heading">Tools &amp; Software</h2>
+      <div class="tools-list">
+        <span class="tool-badge">MATLAB</span>
+        <span class="tool-badge">MS Office</span>
+        <span class="tool-badge">PLC</span>
+      </div>
+    </section>
+
+    <section aria-labelledby="interpersonal-heading">
+      <h2 id="interpersonal-heading">Interpersonal Skills</h2>
+      <ul class="interpersonal-list">
+        <li>Leadership &amp; Presentation</li>
+        <li>Collaborative Problem Solving</li>
+        <li>Team Building &amp; Coaching</li>
+        <li>Organising &amp; Planning</li>
+        <li>Thrives Under Pressure</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="interests-heading">
+      <h2 id="interests-heading">Interests</h2>
+      <p class="hobbies-text">Cricket &middot; Current Affairs &middot; Books Reading &middot; Internet &amp; Technology</p>
+    </section>
+
+    <section aria-labelledby="lang-heading">
+      <h2 id="lang-heading">Languages</h2>
+      <div class="lang-list">
+        <span class="lang-tag">English</span>
+        <span class="lang-tag">Urdu</span>
+      </div>
+    </section>
+
+  </aside>
+
+  <!-- ══════════ MAIN ══════════ -->
+  <main class="main">
+
+    <header class="main-header">
+      <h1 class="main-name">Muhammad <span>Zeeshan</span></h1>
+      <p class="main-role">BS. Electrical Engineering Technology</p>
+      <p class="objective-text">
+        Electrical Engineering graduate with hands-on experience in biomedical equipment maintenance and troubleshooting. Passionate about applying technical knowledge to real-world engineering problems and contributing to efficient hardware solutions.
+      </p>
+    </header>
+
+    <section aria-labelledby="edu-heading">
+      <h2 id="edu-heading">Education</h2>
+
+      <div class="edu-item">
+        <div>
+          <div class="edu-degree">BS. Electrical Engineering Technology</div>
+          <div class="edu-institution">University of Sargodha</div>
+        </div>
+        <span class="edu-year">2020 – 2024</span>
+      </div>
+
+      <div class="edu-item">
+        <div>
+          <div class="edu-degree">FSC. Pre-Engineering</div>
+          <div class="edu-institution">Punjab Groups of College, Sargodha</div>
+        </div>
+        <span class="edu-year">2018 – 2020</span>
+      </div>
+    </section>
+
+    <section aria-labelledby="exp-heading">
+      <h2 id="exp-heading">Internship Experience</h2>
+
+      <div class="intern-item">
+        <div class="intern-role">Biomedical Technician — Intern</div>
+        <div class="intern-org">Biomedical Equipment Resource Center (BERC)</div>
+        <div class="intern-desc">
+          • Performed maintenance and troubleshooting of biomedical equipment<br>
+          • Assisted in calibration and testing of medical devices<br>
+          • Improved equipment reliability through preventive maintenance
+        </div>
+      </div>
+
+      <div class="intern-item">
+        <div class="intern-role">Biomedical Technician Intern (1 Year)</div>
+        <div class="intern-org">Popular International Company, Faisalabad</div>
+        <div class="intern-desc">
+          • Worked in a professional biomedical lab environment<br>
+          • Assisted engineers in installation and troubleshooting of medical equipment<br>
+          • Gained hands-on experience with real-world healthcare devices and safety standards
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item">Testing equipment &amp; tools operation</div>
+        <div class="skill-item">Control system design &amp; implementation</div>
+        <div class="skill-item">Electronic components &amp; circuit systems</div>
+        <div class="skill-item">Power distribution systems &amp; regulations</div>
+        <div class="skill-item">PLC programming (Basic)</div>
+        <div class="skill-item">MATLAB simulation &amp; analysis</div>
+      </div>
+    </section>
+
+    <section aria-labelledby="personal-heading">
+      <h2 id="personal-heading">Personal Information</h2>
+      <div class="personal-grid">
+        <div class="personal-item">
+          <span class="p-label">Date of Birth</span>
+          <span class="p-value">1 April, 2002</span>
+        </div>
+        <div class="personal-item">
+          <span class="p-label">Gender</span>
+          <span class="p-value">Male</span>
+        </div>
+        <div class="personal-item">
+          <span class="p-label">Nationality</span>
+          <span class="p-value">Pakistani</span>
+        </div>
+        <div class="personal-item">
+          <span class="p-label">Languages</span>
+          <span class="p-value">English, Urdu</span>
+        </div>
+      </div>
+    </section>
+
+   
+
+  </main>
+
+</div>
+
+</body>
+</html>
